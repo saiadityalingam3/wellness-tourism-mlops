@@ -4,7 +4,15 @@ import pandas as pd
 import joblib
 
 # Load trained model
-model = joblib.load("tourism_project/model_building/wellness_tourism_model.joblib")
+from huggingface_hub import hf_hub_download
+import joblib
+
+model_path = hf_hub_download(
+    repo_id="saiadityalingam3/wellness-tourism-model",
+    filename="wellness_tourism_model.joblib"
+)
+
+model = joblib.load(model_path)
 
 st.title("Wellness Tourism Package Prediction")
 
