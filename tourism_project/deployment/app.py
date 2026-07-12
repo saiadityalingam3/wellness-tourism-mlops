@@ -109,3 +109,9 @@ if st.button("Predict"):
         st.success("The customer is likely to purchase the Wellness Tourism Package.")
     else:
         st.error("The customer is unlikely to purchase the Wellness Tourism Package.")
+
+st.markdown("---")
+
+st.caption(
+    "Developed using Scikit-learn, Streamlit, Hugging Face and GitHub Actions."
+)
